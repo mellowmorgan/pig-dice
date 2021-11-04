@@ -30,30 +30,32 @@ Expected Output: Number between 1 and 6:<br>
 
 Describe: Player.prototype.rollDice() <br>
 
-Test: "Should use getRandom and modify tally unless result is 1."<br>
+Test: "Should use getRandom and modify tally of player unless result is 1, then 0 out tally if so, return number rolled."<br>
 Code:<br>
-player1.rollDice();
-Expected Output: <br>
+player1.rollDice();<br>
+player1.tally<br>
+Expected Output: random number between 1-6, that number+tally<br>
 
-Describe: Player.prototype.hold()
-Test: ""<br>
+Describe: Player.prototype.hold()<br>
+Test: "Should add current tally to total score of player and zero out tally."<br>
 Code:<br>
-b.addSpace(space1);<br>
-b.spaces;<br>
-Expected Output: {1: space object};<br>
+player1.hold()<br>
+player1.tally;<br>
+player1.score;<br>
+Expected Output:  0, ? <br>
 
 Describe: Game.prototype.switchPlayer()<br>
 
-Test: ""<br>
+Test: "Should switch current player to other player2."<br>
 Code:<br>
-b.addSpace(space1);<br>
-b.spaces;<br>
-Expected Output: {1: space object};<br>
+game.switchPlayer();<br>
+game.currentPlayer;
+Expected Output: "Player 2"<br>
 
 Describe: Game.prototype.checkForWinner()<br>
 
-Test: ""<br>
+Test: "Checks players total scores for at least 100 Returns winner or none"<br>
 Code: <br>
-b.findSpace(1);<br>
-Expected Output: Space object with id 1. <br>
-
+game.checkForWinner()<br>
+<br>
+Expected Output: "none" <br>
