@@ -4,8 +4,6 @@ function Game(){
   this.currentPlayer = this.player1;
 }
 
-
-
 Game.prototype.switchPlayer = function(){
   if (this.currentPlayer.name==="Player 1"){
     this.currentPlayer = this.player2;
@@ -16,7 +14,6 @@ Game.prototype.switchPlayer = function(){
   }
    
 }
-
 
 function Player(name) {
   this.name = name;
@@ -56,8 +53,34 @@ Game.prototype.checkForWinner = function(){
   return winner;
 }
 
+let game = new Game();
+
+function attachContactListeners(){
+  $("#roll").on("click", function() {
+    let num = game.currentPlayer.rollDice();
+    $("#roll-number-value").html(num);
+    if (game.currentPlayer.name === "Player 1") {
+    $("#p1-current-tally").html("Tally: "+ game.currentPlayer.tally);
+  } else if (game.currentPlayer.name === "Player 2") {
+    $("#p2-current-tally").html("Tally: "+ game.currentPlayer.tally);
+  }
+});
+$("#hold").on("click", function() {
+  $("#p1-current-tally").html("Tally: "+ 0);
+  $("#p2-current-tally").html("Tally: "+ 0);
+  if (game.currentPlayer.name === "Player 1") {
+  $("#p1-current-score").html("Score: "+ game.currentPlayer.score);
+} else if (game.currentPlayer.name === "Player 2") {
+  $("#p2-current-score").html("Score: "+ game.currentPlayer.score);
+}
+});
+}
+
+
 $(document).ready(function() {
-  
+ 
+  $("#current-player").html(game.currentPlayer.name);
+  attachContactListeners();
   
 });
 
