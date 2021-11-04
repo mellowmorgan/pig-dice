@@ -9,6 +9,9 @@ h1{
   background-color: aliceblue;
   text-align: center;
 }
+div{
+  margin-bottom:.5rem;
+}
 
 .game-over{
   display:none;

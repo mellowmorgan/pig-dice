@@ -1,3 +1,7 @@
+## Known Bugs
+
+If clicking roll too quickly, it trips up the tally display, most likely because of delay I adding for displaying reasons.
+
 ## Tests
 
 Describe: Game
@@ -5,9 +9,9 @@ Describe: Game
 Test: "New game object should create two players and current player set to player 1."<br>
 Code: <br>
 let game = new Game();<br>
-game.player1.name;<br>
-game.player2.name;<br>
-game.currentPlayer;<br>
+game.player1.name; <br>
+game.player2.name; <br>
+game.currentPlayer; <br>
 Expected Output: "Player 1", "Player 2", player 1<br>
 
 Describe: Player<br>
@@ -15,8 +19,8 @@ Describe: Player<br>
 Test: "New player object should have properties name and current score and turn tally initialized to 0."<br>
 Code:<br>
 let player1 = new Player("Player 1");<br>
-player1.name;<br>
-player1.score;<br>
+player1.name; <br>
+player1.score; <br>
 player1.turnTally;<br>
 Expected Output: "Player 1", 0, 0<br>
 
