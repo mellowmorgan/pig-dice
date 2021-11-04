@@ -11,10 +11,8 @@ Game.prototype.switchPlayer = function(){
   }
   else{
     this.currentPlayer = this.player1;
-  }
-   
+  }  
 }
-
 function Player(name) {
   this.name = name;
   this.score = 0;

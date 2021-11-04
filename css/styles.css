@@ -9,13 +9,17 @@ h1{
   background-color: aliceblue;
   text-align: center;
 }
-<<<<<<< HEAD
+
 div{
   margin-bottom:.5rem;
 }
-=======
->>>>>>> 82b2f2988efbb6fb86093856f65af44eaf353d6f
+.center-game{
+  text-align:center;
+  margin-left:auto;
+  margin-right: auto;
+}
 
 .game-over{
   display:none;
+  text-align:center;
 }
