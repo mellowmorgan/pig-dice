@@ -61,21 +61,21 @@ function attachContactListeners(){
     $("#roll-number-value").html(num);
     if (game.currentPlayer.name === "Player 1") {
     $("#p1-current-tally").html("Tally: "+ game.currentPlayer.tally);
-  } else if (game.currentPlayer.name === "Player 2") {
+    } else if (game.currentPlayer.name === "Player 2") {
     $("#p2-current-tally").html("Tally: "+ game.currentPlayer.tally);
-  }
-});
-$("#hold").on("click", function() {
+    }
+  });
+  $("#hold").on("click", function() {
+  game.hold();
+  $("#p1-total-score").html("Score: "+ game.player1.score);
+  $("#p2-total-score").html("Score: "+ game.player2.score);
   $("#p1-current-tally").html("Tally: "+ 0);
-  $("#p2-current-tally").html("Tally: "+ 0);
-  if (game.currentPlayer.name === "Player 1") {
-  $("#p1-current-score").html("Score: "+ game.currentPlayer.score);
-} else if (game.currentPlayer.name === "Player 2") {
-  $("#p2-current-score").html("Score: "+ game.currentPlayer.score);
+  $("#p2-current-tally").html("Tally: "+ 0);  
+  $("#current-player").html(game.currentPlayer.name);
+  $("#roll-number-value").html(0);
+  });
 }
-});
-}
-
+//WHEN BACK FROM LUNCH FIX number 1 roll problem
 
 $(document).ready(function() {
  
