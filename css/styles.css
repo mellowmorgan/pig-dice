@@ -1,0 +1,12 @@
+#dice-image-header{
+  background-image: url(../img/cube.jpeg);
+  height:20rem;
+  width:100%;
+  background-size: cover;
+  background-position-y: center;
+}
+h1{
+  background-color: aliceblue;
+  
+  text-align: center;
+}

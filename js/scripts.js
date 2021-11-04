@@ -4,10 +4,7 @@ function Game(){
   this.currentPlayer = this.player1;
 }
 
-Game.prototype.getRandom = function(){
-  let number = Math.floor((Math.random() * 6) + 1);
-    return number;
-    }  
+
 
 Game.prototype.switchPlayer = function(){
   if (this.currentPlayer.name==="Player 1"){
@@ -26,10 +23,13 @@ function Player(name) {
   this.score = 0;
   this.tally = 0;
 }
-
+Player.prototype.getRandom = function(){
+  let number = Math.floor((Math.random() * 6) + 1);
+    return number;
+  }  
 
 Player.prototype.rollDice = function(){
-  let numberRolled = Game.getRandom();
+  let numberRolled = this.getRandom();
   if (numberRolled !=1){
     this.tally +=numberRolled;
   } 
@@ -38,10 +38,10 @@ Player.prototype.rollDice = function(){
   }
   return numberRolled;
 }
-Player.prototype.hold(){
-  this.score += this.tally;
-  this.tally = 0;
-  Game.switchPlayer;
+Game.prototype.hold = function(){
+  this.currentPlayer.score += this.currentPlayer.tally;
+  this.currentPlayer.tally = 0;
+  this.switchPlayer();
 }
 Game.prototype.checkForWinner = function(){
   let winner="none";
@@ -57,6 +57,7 @@ Game.prototype.checkForWinner = function(){
 }
 
 $(document).ready(function() {
-
+  
+  
 });
 
