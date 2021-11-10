@@ -1,5 +1,5 @@
 #dice-image-header{
-  background-image: url(../img/cube.jpeg);
+  background-image: url(./../img/cube.jpeg);
   height:20rem;
   width:100%;
   background-size: cover;
