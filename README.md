@@ -1,3 +1,30 @@
+# Pig Dice
+
+#### Webpage for pig dice game
+
+#### By Morgan Waites
+
+## Technologies Used
+
+* Javascript
+* Jest
+* HTML/CSS/Bootstrap
+
+## Description
+
+Roll dice with 2 players on one screen until one hits 100. If you roll a 1 your round score zeros out and next player goes. Otherwise roll indefinitely to rack up the points.
+
+## Setup/Installation Requirements
+
+* git clone this repo
+* navigate to top-level of directory
+* npm install
+* npm run start
+* to run tests, exit server with CTRL+C then npm test in terminal
+
+## License
+[MIT](https://opensource.org/licenses/MIT) Copyright 2021 Morgan Waites .
+
 ## Known Bugs
 
 If clicking roll too quickly, it trips up the tally display, most likely because of delay I adding for displaying reasons.
